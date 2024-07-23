@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Alura Challenge</title>
 </head>
 <body>
+     <header class="header">
+        <img src="img/Logo.png" alt="">
+     </header>
+     <!--INICIO DE MAIN-->
+        <main class = "main">
+            <section class="main__texto">
+                
+                <textarea class="mensaje"
+                id="texto" autocapitalize="off" placeholder="Ingrese el texto aqui"></textarea>
+                <p class="aviso"> <img src="img/bi_exclamation-circle-fill.png" alt="">Introduce solo letras minúsculas y sin acentos.</p>
+            
+            <div class="botones">   
+                <button onclick="encriptar()" class="botones__encriptar">Encriptar</button>
+                <button onclick="desencriptar()" class="botones_desencriptar">Desencriptar</button>
+            </div>
+        </section>
+            
+        <section class="main__mostrar">         
+            <div >
+                <img  class="main__mostrar__img" src="img/Muñeco (1).png" alt="">
+                <h2 class="main__mostrar__msj">Ningun mensaje fue encontrado</h2>
+                <p></p>
+                
+            </div>
+                <textarea id="textoEncriptado" class="main__mostrar__textarea" disabled>ingrese el texto que desea encriptar o desencriptar</textarea>
+                <button onclick="copiarTexto()" id="btnCopiar" class="boton__copia"> Copiar </button>
+            
+            </section>
+            
+        </main>
 
-</body>
+    <footer class="footer">
+        <p>Desarrollado por daniel Martinez para alura latam</p>
+    </footer>
+  
+    <script src="app.js"></script>
 </html>
