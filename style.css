@@ -45,7 +45,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px;
+    padding: 1.5rem;
     
   }
   .botones__encriptar,.botones_desencriptar{
@@ -57,16 +57,18 @@
     line-height: 1.21rem;
     transition-duration: 0.4s;
     cursor: pointer;
+    gap: 1.5rem;
+      
   }
   .botones__encriptar{
     font-family:var(--fuente--principal);
     background-color: var(--color--dark-blue);
-  
+    margin-right: 1.5rem;
   }
 .botones_desencriptar{
   background-color: var(--color--boton);
   color: var(--color--dark-blue);
- 
+ margin-right: 0;
 }
 .main__mostrar{
   display: flex;
@@ -76,7 +78,7 @@
   background-color: var(--color--whiter);
   border-radius: 3.2rem;
   padding: 2rem;
-  margin: 1rem;
+  margin: 4rem;
  
 }
 .main__mostrar__contenido.hidden{
@@ -112,12 +114,14 @@ width: 100%;
   font-size: 1rem;
   width:100%;
   height: 4.18rem;
+  padding: 24px;
   border-radius: 24px;
+  border: 1px solid var(--color--dark-blue);
   text-decoration: none;
   line-height: 1.21rem;
   transition-duration: 0.4s;
   cursor: pointer;
-  background-color: var(--color--boton);
+  background-color: var(--color--whiter);
   color: var(--color--dark-blue);
 }
 .footer{
@@ -125,8 +129,35 @@ width: 100%;
   
 
 }
-@media (max-whidth:1024px){
-  .main__mostrar{
+@media (max-width: 1400px){
+
+  .main {
+    flex-direction: column;
+    padding: 1rem;
+    margin: 80px;
+}
+
+.main__texto, .main__mostrar {
     width: 100%;
-  }
+    margin-bottom: 1rem;
+    margin-top: 116px;
+}
+
+.botones__encriptar, .botones_desencriptar {
+    width: 100%;
+
+}
+.main__mostrar__contenido{
+width: 100%;
+margin: 0 auto;
+}
+.main__mostrar__msj{
+  text-align: center;
+}
+.main__mostrar__img{
+display: none;
+}
+.main__mostrar__textarea{
+  width:100% ;
+}
 }

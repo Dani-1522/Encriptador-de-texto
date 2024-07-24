@@ -25,6 +25,7 @@ function encriptar() {
     }
     const textoEncriptadoElem = document.getElementById("textoEncriptado").value = textoEncriptado;
     mostrarTextoEncriptado();
+    toggleCopiarButton();
   }
   
   function desencriptar() {
@@ -40,6 +41,7 @@ function encriptar() {
   
     const textoEncriptadoElem = document.getElementById("textoEncriptado").value = textoDesencriptado;
   mostrarTextoEncriptado();
+  toggleCopiarButton();
   }
   function mostrarTextoEncriptado() {
     const contenidoDiv = document.querySelector(".main__mostrar__contenido");
@@ -50,17 +52,31 @@ function encriptar() {
 }
 
 
-  function copiarTexto(){
-    const textoCopiado =document.getElementById("textoEncriptado");
-    const btncopiar = document.getElementById("btnCopiar");
-    
-    navigator.clipboard.writeText(textoEncriptado.value)
-    .then(() => {
-      btncopiar.ATTRIBUTE_NODE.textContent = "copiado!";
-      btncopiar.classList.add("copiado!");
-    })
-    .catch(err => {
-      console.error("Error al copiar el texto: ", err);
-    });
+  function copiarTexto() {
+    const textoCopiado = document.getElementById("textoEncriptado");
+    const btnCopiar = document.getElementById("btnCopiar");
+
+    navigator.clipboard.writeText(textoCopiado.value)
+        .then(() => {
+            btnCopiar.textContent = "¡Copiado!";
+            setTimeout(() => {
+                btnCopiar.textContent = "Copiar";
+            }, 2000);
+        })
+        .catch(err => {
+            console.error("Error al copiar el texto: ", err);
+        });
+}
+
+
+function toggleCopiarButton() {
+  const textoEncriptado = document.getElementById("textoEncriptado").value;
+  const btnCopiar = document.getElementById("btnCopiar");
+  if (textoEncriptado.trim() !== "") {
+      btnCopiar.style.display = "block";
+  } else {
+      btnCopiar.style.display = "none";
   }
+}
+
   
