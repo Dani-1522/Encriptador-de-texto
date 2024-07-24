@@ -23,8 +23,8 @@ function encriptar() {
           textoEncriptado += textoOriginal[i];
       }
     }
-  
-    document.getElementById("textoEncriptado").value = textoEncriptado;
+    const textoEncriptadoElem = document.getElementById("textoEncriptado").value = textoEncriptado;
+    mostrarTextoEncriptado();
   }
   
   function desencriptar() {
@@ -38,8 +38,17 @@ function encriptar() {
                                        .replace(/ober/g, 'o')
                                        .replace(/ufat/g, 'u');
   
-    document.getElementById("textoEncriptado").value = textoDesencriptado;
+    const textoEncriptadoElem = document.getElementById("textoEncriptado").value = textoDesencriptado;
+  mostrarTextoEncriptado();
   }
+  function mostrarTextoEncriptado() {
+    const contenidoDiv = document.querySelector(".main__mostrar__contenido");
+    const textoEncriptadoElem = document.getElementById("textoEncriptado");
+
+    contenidoDiv.classList.add("hidden");
+    textoEncriptadoElem.classList.add("fullscreen");
+}
+
 
   function copiarTexto(){
     const textoCopiado =document.getElementById("textoEncriptado");
