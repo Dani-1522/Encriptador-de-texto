@@ -1,5 +1,5 @@
 function encriptar() {
-  const textoOriginal = document.getElementById("texto").value;
+  const textoOriginal = document.getElementById("textoEntrada").value;
   let textoEncriptado = "";
 
   for (let i = 0; i < textoOriginal.length; i++) {
@@ -24,13 +24,13 @@ function encriptar() {
       }
   }
 
-  document.getElementById("textoEncriptado").value = textoEncriptado;
+  document.getElementById("textoSalida").value = textoEncriptado;
   mostrarTextoEncriptado();
   toggleCopiarButton();
 }
 
 function desencriptar() {
-  const textoEncriptado = document.getElementById("texto").value;
+  const textoEncriptado = document.getElementById("textoEntrada").value;
 
   let textoDesencriptado = textoEncriptado.replace(/enter/g, 'e')
                                           .replace(/imes/g, 'i')
@@ -38,21 +38,21 @@ function desencriptar() {
                                           .replace(/ober/g, 'o')
                                           .replace(/ufat/g, 'u');
 
-  document.getElementById("textoEncriptado").value = textoDesencriptado;
+  document.getElementById("textoSalida").value = textoDesencriptado;
   mostrarTextoEncriptado();
   toggleCopiarButton();
 }
 
 function mostrarTextoEncriptado() {
-  const contenidoDiv = document.querySelector(".main__mostrar__contenido");
-  const textoEncriptadoElem = document.getElementById("textoEncriptado");
+  const contenidoDiv = document.querySelector(".seccion__salida__contenido");
+  const textoEncriptadoElem = document.getElementById("textoSalida");
 
   contenidoDiv.classList.add("hidden");
   textoEncriptadoElem.classList.add("fullscreen");
 }
 
 function copiarTexto() {
-  const textoCopiado = document.getElementById("textoEncriptado");
+  const textoCopiado = document.getElementById("textoSalida");
   const btnCopiar = document.getElementById("btnCopiar");
 
   navigator.clipboard.writeText(textoCopiado.value)
@@ -68,7 +68,7 @@ function copiarTexto() {
 }
 
 function toggleCopiarButton() {
-  const textoEncriptado = document.getElementById("textoEncriptado").value;
+  const textoEncriptado = document.getElementById("textoSalida").value;
   const btnCopiar = document.getElementById("btnCopiar");
 
   if (textoEncriptado.trim() !== "") {
@@ -83,7 +83,7 @@ function ajustarAlturaTextarea(textarea) {
 }
 
 // Añadir evento para ajustar la altura del textarea cuando se añade texto
-document.getElementById("textoEncriptado").addEventListener("input", function() {
+document.getElementById("textoSalida").addEventListener("input", function() {
     ajustarAlturaTextarea(this);
 });
 
