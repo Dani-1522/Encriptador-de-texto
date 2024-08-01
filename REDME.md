@@ -11,7 +11,7 @@ Este es un proyecto de encriptador y desencriptador de texto que transforma el t
 - [Tecnologías](#tecnologías)
 - [Instalación](#instalación)
 - [Uso](#uso)
-  [Funcionalidad](#funcionalidad)
+- [Funcionalidad](#funcionalidad)
 
 ## Características
 
@@ -54,5 +54,3 @@ Este es un proyecto de encriptador y desencriptador de texto que transforma el t
 - `Función mostrarTextoEncriptado`: Oculta el contenido original y hace que el campo de texto encriptado ocupe todo el espacio disponible.
 - `Función copiarTexto`: Copia el texto del campo "textoSalida" al portapapeles y actualiza el texto del botón de copiar para indicar el éxito. Maneja errores en caso de fallo.
 - `Función toggleCopiarButton`: Muestra u oculta el botón de copiar basado en si el campo "textoSalida" está vacío o no.
-- `Función ajustarAlturaTextarea`: Ajusta la altura del textarea para que se adapte automáticamente al contenido.
-- `Evento de entrada de texto`: Ajusta la altura del textarea en el campo "textoSalida" cada vez que se introduce texto.
