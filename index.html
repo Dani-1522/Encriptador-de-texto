@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Encriptar y Desencriptar de texto</title>
+  <title>Encriptar y Desencriptar de texto</title>
 </head>
 <body>
      <header class="header">
-        <img src="img/Logo.png" alt="">
+        <img src="img/Logo.png" alt="logo de alura" class="logo" >
      </header>
      <!--INICIO DE MAIN-->
         <main class = "main">
             <section class="seccion__entrada">
-                <textarea class="seccion__entrada__textarea"
+                <textarea class="seccion__entrada__textarea" cols="30" rows="10"
                 id="textoEntrada" autocapitalize="off" placeholder="Ingrese el texto aqui"></textarea>
-                <p class="aviso"> <img src="img/bi_exclamation-circle-fill.png" alt="signo de exclamacion">Introduce solo letras minúsculas y sin acentos.</p>
-            
+               <div>
+                <h6 class="aviso"> <img src="img/bi_exclamation-circle-fill.png" alt="signo de exclamacion">Introduce solo letras minúsculas y sin acentos.</h6>
+               </div>
+                
             <div class="botones">   
                 <button onclick="encriptar()" class="boton__encriptar">Encriptar</button>
                 <button onclick="desencriptar()" class="boton__desencriptar">Desencriptar</button>
@@ -29,7 +31,7 @@
                     <h2 class="seccion__salida__mensaje">Ningun mensaje fue encontrado</h2>
                     <p></p>
                 </div>
-                    <textarea id="textoSalida" class="seccion__salida__textarea" disabled >ingrese el texto que desea encriptar o desencriptar</textarea>
+                    <textarea id="textoSalida" class="seccion__salida__textarea" cols="20" rows="10" disabled >ingrese el texto que desea encriptar o desencriptar</textarea>
                     <button onclick="copiarTexto()" id="btnCopiar" class="boton__copia" style="display: none;"> Copiar </button>
                
                 </section>
@@ -37,7 +39,9 @@
     <!--FIN DE MAIN-->
     <!--INICIO DEL FOOTER-->
     <footer class="footer">
-        <p>Desarrollado por Daniel Martinez para alura latam</p>
+        <p>Desarrollado por Daniel Martinez para alura latam
+           <br> año 2024 
+        </p>
     </footer>
     <!--FIN DE FOOTER-->
     <script src="app.js"></script>
