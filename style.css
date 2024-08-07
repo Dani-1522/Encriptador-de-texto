@@ -216,8 +216,8 @@ display: none;
     padding: 1rem;
   }
 
-  .seccion__entrada__textarea {
-      height: 20rem;
+.seccion__entrada__textarea {
+      width: 100%;
       font-size: 1.8rem;
   }
 
